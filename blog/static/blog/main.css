@@ -1,0 +1,7 @@
+body {
+    background: #00FF00;
+}
+<link rel="stylesheet" href="{% static 'blog/main.css' %}">
+.alert-light {
+    border-color: #bfbfbf;
+}

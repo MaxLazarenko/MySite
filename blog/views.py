@@ -1,6 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import New
 
 # Create your views here.
+
 def home(request):
-    return HttpResponse('<h2>Привет мир!</h2>')
+    data = {
+        'news': New.objects.all(),
+        'title': 'Главная страница'
+    }
+    return render(request, 'blog/home.html', data)
+
+def contacts(request):
+    return render(request, 'blog/contacts.html',{'title': 'Страничка про семью'})
